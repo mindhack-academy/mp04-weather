@@ -17,6 +17,7 @@ class HomeVC: UIViewController {
         
         forecastTableView.delegate = self
         forecastTableView.dataSource = self
+
     }
 
 
@@ -36,6 +37,7 @@ extension HomeVC: UITableViewDataSource {
         
         let df = DateFormatter()
         cell.dayLabel.text = df.weekdaySymbols[indexPath.row]
+        cell.conditionLabel.text = "\(indexPath.row)"
         
         return cell
     }
